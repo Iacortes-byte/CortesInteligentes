@@ -10,12 +10,12 @@ export default function HeroSection() {
     setIsVisible(true)
   }, [])
 
-  const scrollToBonuses = () => {
-    document.getElementById("bonuses")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToViralVideos = () => {
+    document.getElementById("viral-videos")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center galactic-bg stars-bg">
+    <section className="relative min-h-[90vh] pb-12 flex items-center justify-center galactic-bg stars-bg">
       <div className="absolute inset-0 bg-black/10"></div>
 
       <div className="relative z-10 w-full">
@@ -24,7 +24,7 @@ export default function HeroSection() {
         >
           <div className="mb-8">
             <Image
-              src="/placeholder.svg?height=200&width=200"
+              src="/log_att.png"
               alt="IA + Celular + Galáxia"
               width={200}
               height={200}
@@ -47,7 +47,7 @@ export default function HeroSection() {
           </div>
 
           <button
-            onClick={scrollToBonuses}
+            onClick={scrollToViralVideos}
             className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition-all duration-300 transform hover:scale-105 neon-glow pulse-neon"
           >
             🚀 Quero Aprender Agora

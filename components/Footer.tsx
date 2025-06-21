@@ -22,6 +22,7 @@ export default function Footer() {
 
           <div className="space-y-2 text-gray-300">
             <p>📧 Suporte: iacortesinteligentes@gmail.com</p>
+            <p>📱 TikTok: @iacortesinteligentes</p>
           </div>
 
           <div className="pt-6 border-t border-gray-800">

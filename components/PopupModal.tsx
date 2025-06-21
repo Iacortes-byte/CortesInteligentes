@@ -55,7 +55,7 @@ export default function PopupModal() {
       {/* Backdrop */}
       <div
         className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-          isVisible ? "opacity-70" : "opacity-0"
+          isVisible ? "opacity-90" : "opacity-0"
         }`}
         onClick={closeModal}
       />

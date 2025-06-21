@@ -6,27 +6,23 @@ import Image from "next/image"
 const viralVideos = [
   {
     views: "🎥 2,7M de views",
-    timeToViral: "⏱️ Viralizou em 2 dias",
-    earnings: "💸 R$1.350 arrecadados",
-    image: "/videos/video1-thumb.jpg",
+    timeToViral: "⏱️ Viralizou em 3 dias",
+    image: "/velha.gif",
   },
   {
     views: "🎥 8M de views",
-    timeToViral: "⏱️ Em 5 dias",
-    earnings: "💸 R$2.100 faturados",
-    image: "/videos/video2-thumb.jpg",
-  },
-  {
-    views: "🎥 250K de views (sem aparecer)",
     timeToViral: "⏱️ Em 2 dias",
-    earnings: "💸 R$490 com link na bio",
-    image: "/videos/video3-thumb.jpg",
+    image: "/armadura.gif",
   },
   {
-    views: "🎥 180K de views",
-    timeToViral: "⏱️ Viralizou em 1 dia",
-    earnings: "💸 R$390 em comissões",
-    image: "/videos/video4-thumb.jpg",
+    views: "🎥 1,2M de views",
+    timeToViral: "⏱️ Em 7 dias",
+    image: "/naruto.gif",
+  },
+  {
+    views: "🎥 710K de views",
+    timeToViral: "⏱️ Viralizou em 5 dia",
+    image: "/dicaprio.gif",
   },
 ]
 
@@ -52,7 +48,7 @@ export default function ViralVideosSection() {
           {viralVideos.map((video, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-80 bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-xl overflow-hidden border border-purple-500/30 hover:border-pink-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/25 hover:z-20 mx-2"
+              className="group relative flex-shrink-0 w-80 bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-xl overflow-hidden border border-purple-500/30 mx-2"
               style={{
                 minWidth: "320px",
                 transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -63,16 +59,13 @@ export default function ViralVideosSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               </div>
 
-              <div className="p-6 transition-all duration-300">
+              <div className="p-4 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-2 text-pink-400 transition-colors duration-300 group-hover:text-pink-300">
                   {video.views}
                 </h3>
-                <h4 className="text-lg font-semibold mb-2 text-purple-300 transition-colors duration-300 group-hover:text-purple-200">
+                <h4 className="text-lg font-semibold mb-0 text-purple-300 transition-colors duration-300 group-hover:text-purple-200">
                   {video.timeToViral}
                 </h4>
-                <p className="text-gray-300 transition-colors duration-300 group-hover:text-gray-200">
-                  {video.earnings}
-                </p>
               </div>
             </div>
           ))}
