@@ -93,7 +93,7 @@ export default function PopupModal() {
             <h1 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
               <span className="text-orange-400">🔥</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400">
-                Já Imaginou em transformar seu TikTok em uma fonte de renda em 
+                Já Imaginou em transformar seu TikTok em uma fonte de renda em
               </span>{" "}
               <span className="text-blue-400 animate-pulse">apenas 30 dias usando IA?</span>
             </h1>
@@ -105,62 +105,35 @@ export default function PopupModal() {
           </div>
         </div>
 
-        {/* Benefits Section */}
-        {/* <div className="px-8 pb-6">
-          <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-6 border border-green-500/30">
-            <h3 className="text-xl font-bold text-green-400 mb-4 text-center">
-              ⚡ Por Que Isso Funciona Para Qualquer Pessoa:
-            </h3>
-            <div className="grid gap-3">
-              <div className="flex items-start gap-3">
-                <span className="text-green-400 text-lg">✅</span>
-                <span className="text-gray-200">Não precisa ter experiência prévia em Inteligência Artificial</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-green-400 text-lg">✅</span>
-                <span className="text-gray-200">Não precisa saber programar ou ter faculdade</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-green-400 text-lg">✅</span>
-                <span className="text-gray-200">Crie assistentes que vendem, atendem e automatizam</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-green-400 text-lg">✅</span>
-                <span className="text-gray-200">Lucre com ideias usando IA de forma simples e prática</span>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        {/* Bonuses Section */}
+        <div className="px-8 pb-6">
+          <h3 className="text-2xl font-bold text-center mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+              🎁 BÔNUS EXCLUSIVOS INCLUSOS
+            </span>
+          </h3>
 
-  {/* Bonuses Section */}
-{<div className="px-8 pb-6">
-  <h3 className="text-2xl font-bold text-center mb-6">
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-      🎁 BÔNUS EXCLUSIVOS INCLUSOS
-    </span>
-  </h3>
-
-  <div className="grid gap-4">
-    {bonuses.map((bonus, index) => (
-      <div
-        key={index}
-        className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 border border-green-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:scale-[1.02]"
-      >
-        <div className="flex items-center gap-4">
-          <div className="flex-shrink-0">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center border border-green-400/30">
-              <span className="text-2xl text-green-300">{bonus.icon}</span>
-            </div>
-          </div>
-          <div className="flex-1">
-            <h4 className="font-bold text-green-300 mb-1">{bonus.title}</h4>
-            <p className="text-sm text-gray-200">{bonus.description}</p>
+          <div className="grid gap-4">
+            {bonuses.map((bonus, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 border border-green-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center border border-green-400/30">
+                      <span className="text-2xl text-green-300">{bonus.icon}</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-green-300 mb-1">{bonus.title}</h4>
+                    <p className="text-sm text-gray-200">{bonus.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
 
         {/* CTA Section */}
         <div className="px-8 pb-8">

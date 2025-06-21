@@ -6,12 +6,14 @@ import Image from "next/image"
 const viralVideos = [
   {
     views: "🎥 2,7M de views",
-    timeToViral: "⏱️ Viralizou em 2 dias"
+    timeToViral: "⏱️ Viralizou em 2 dias",
+    earnings: "💸 R$1.350 arrecadados",
     image: "/videos/video1-thumb.jpg",
   },
   {
     views: "🎥 8M de views",
     timeToViral: "⏱️ Em 5 dias",
+    earnings: "💸 R$2.100 faturados",
     image: "/videos/video2-thumb.jpg",
   },
   {
@@ -36,10 +38,10 @@ export default function ViralVideosSection() {
   }
 
   return (
-      <section id="viral-videos" className="py-16 bg-slate-800 overflow-visible relative">
+    <section id="viral-videos" className="py-16 bg-slate-800 overflow-visible relative">
       <div className="relative z-0 container mx-auto px-2 overflow-visible">
         <h2 className="relative z-10 text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-      💡 Veja como vídeos simples viralizaram e geraram renda com IA
+          💡 Veja como vídeos simples viralizaram e geraram renda com IA
         </h2>
 
         <div
