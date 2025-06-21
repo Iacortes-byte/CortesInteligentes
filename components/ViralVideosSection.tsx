@@ -7,7 +7,7 @@ const viralVideos = [
   {
     views: "🎥 2,7M de views",
     timeToViral: "⏱️ Viralizou em 3 dias",
-    image: "/velha.gif",
+    image: "/Velha.gif",
   },
   {
     views: "🎥 8M de views",
@@ -42,7 +42,7 @@ export default function ViralVideosSection() {
 
         <div
           ref={scrollRef}
-          className="relative z-50 flex gap-8 overflow-x-auto overflow-visible pb-6 px-4 scrollbar-hide"
+          className="relative z-50 flex gap-2 md:gap-8 overflow-x-auto overflow-visible pb-6 px-4 scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {viralVideos.map((video, index) => (
