@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-slate-900 text-white;
+  }
+}
+
+@layer components {
+  .galactic-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #7c3aed 50%, #a855f7 75%, #ec4899 100%);
+    background-size: 400% 400%;
+    animation: galaxyMove 8s ease-in-out infinite;
+    background-attachment: fixed;
+  }
+
+  .stars-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stars-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(3px 3px at 20px 30px, #fff, transparent),
+      radial-gradient(3px 3px at 40px 70px, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(2px 2px at 90px 40px, #fbbf24, transparent),
+      radial-gradient(2px 2px at 130px 80px, #f472b6, transparent),
+      radial-gradient(3px 3px at 160px 30px, #a78bfa, transparent),
+      radial-gradient(2px 2px at 200px 60px, #34d399, transparent),
+      radial-gradient(1px 1px at 250px 90px, #60a5fa, transparent),
+      radial-gradient(2px 2px at 300px 20px, #fb7185, transparent),
+      radial-gradient(1px 1px at 350px 70px, #fde047, transparent),
+      radial-gradient(2px 2px at 380px 40px, #c084fc, transparent);
+    background-repeat: repeat;
+    background-size: 400px 200px;
+    animation: starsMove 25s linear infinite;
+    pointer-events: none;
+  }
+
+  .stars-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(1px 1px at 50px 100px, #fff, transparent),
+      radial-gradient(2px 2px at 150px 150px, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(1px 1px at 280px 120px, #f59e0b, transparent),
+      radial-gradient(1px 1px at 320px 180px, #ec4899, transparent),
+      radial-gradient(2px 2px at 100px 200px, #8b5cf6, transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: starsMove 30s linear infinite reverse;
+    pointer-events: none;
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+  }
+
+  .pulse-neon {
+    animation: pulseNeon 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes galaxyMove {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(-400px) translateY(-50px);
+  }
+}
+
+@keyframes pulseNeon {
+  from {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 60px rgba(168, 85, 247, 0.6);
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
